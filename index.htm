@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<link data-dump-line-numbers="all" rel="stylesheet/less" type="text/css" href="layout/less/base.less">
+		<script>
+		less = {
+			env: "development",
+			logLevel: 2,
+			async: true,
+			fileAsync: true,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+		</script>
+		<script src="layout/javascript/less.js"></script>
+		<script>less.watch();</script>
+	</head>
+	<body>
+		<header>
+			<h1>
+				<a href="#" class="logo" title="{logo}">Fare<span>hafen</span></a>
+			</h1>
+			<nav>
+				<li>Suche</li>
+				<li>Zuletzt Hinzugefügt</li>
+				<li>Kontakt</li>
+			</nav>
+		</header>
+		<section>
+			<form>
+				<fieldset>
+					<legend>Suche</legend>
+					<input type="search" id="keyword" name="keyword" placeholder="Schlüsselwort" autofocus="autofocus" />
+					<label for="keyword">Schlüsselwort</label>
+				</fieldset>
+				<fieldset>
+					<legend>Location</legend>
+					<input type="text" id="location" name="location" />
+					<label for="location">Location</label>
+
+					<select id="radius" name="radius">
+						<option>test1</option>
+						<option>test2</option>
+						<option>test3</option>
+						<option>test4</option>
+					</select>
+					<label for="radius">Radius</label>
+				</fieldset>
+				<fieldset>
+					<legend>Zeitraum</legend>
+					<input type="date" id="date" name="date" />
+					<label for="date">Datum</label>
+
+					<select id="duration" name="duration">
+						<option>1 Monat</option>
+						<option>2 Monate</option>
+						<option>½ Jahr</option>
+						<option>1 Jahr</option>
+						<option>Benutzerdefiniert</option>
+					</select>
+					<label>Zeitraum</label>
+				</fieldset>
+				<fieldset>
+					<legend>Filter</legend>
+					<select id="category" name="category">
+						<option>test1</option>
+						<option>test2</option>
+						<option>test3</option>
+						<option>test4</option>
+					</select>
+					<label id="category">Kategorie</label>
+
+					<input type="checkbox" name="freespace" />
+					<label id="freespace">Nur Veranstaltungen anzeigen die noch über freie Plätze verfügen</label>
+				</fieldset>
+				<input type="submit" value="Suchen" />
+			</form>
+		</section>
+		<main>
+			<ol>
+				<li>
+
+				</li>
+			</ol>
+		</main>
+		<footer>
+			<ul>
+				<li>Hilfe</li>
+				<li>FAQ</li>
+				<li>Kontakt</li>
+				<li>Impressum</li>
+			</ul>
+		</footer>
+	</body>
+</html>

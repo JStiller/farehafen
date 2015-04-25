@@ -1,0 +1,56 @@
+form, fieldset, label, button, .button, input, textarea, select {
+	box-sizing: border-box;
+	display: inline-block;
+	width: @width;
+	min-width: @min-width;
+	min-height: @min-height;
+	line-height: @min-height;
+}
+
+input {
+	outline: 0;
+}
+
+fieldset {
+	border: 0;
+}
+
+legend {
+	display: none;
+}
+
+button, .button, input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], input[type=number], textarea, select {
+	background-color: #EEEEEE;
+	padding: 0 @padding;
+	border: 0;
+	border-bottom: @border-width solid #CCCCCC;
+	margin: 0;
+	outline: 0;
+
+	&:hover {
+		border-bottom-color: #BBBBBB;
+	}
+
+	&:focus {
+		border-bottom-color: @color_yellow;
+
+		& + label {
+			color: @color_yellow;
+		}
+	}
+
+	&:active {
+		background-color: @color_yellow;
+		border-color: #EEEEEE;
+	}
+
+	& + label {
+
+	}
+}
+
+input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], input[type=number] {
+	&::-webkit-input-placeholder {
+	color: @color_white;
+	}
+}
