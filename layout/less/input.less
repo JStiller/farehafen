@@ -1,0 +1,27 @@
+input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], input[type=number], input[type=date], input[type=checkbox], input[type=radio], textarea, select {
+	background-color: #EEEEEE;
+	padding: 0 @padding;
+	border: 0;
+	border-bottom: @border-width solid #CCCCCC;
+	margin: 0;
+
+	&:hover {
+		border-bottom-color: #BBBBBB;
+	}
+
+	&:focus {
+		border-bottom-color: @color_yellow;
+
+		& + label {
+			color: @color_yellow;
+		}
+	}
+
+	&:active {
+		background-color: overlay(#EEEEEE, @color_yellow);
+	}
+
+	& + label {
+
+	}
+}
