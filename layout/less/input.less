@@ -1,4 +1,4 @@
-input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], input[type=number], input[type=date], input[type=checkbox], input[type=radio], textarea, select {
+textarea {
 	background-color: #EEEEEE;
 	padding: 0 @padding;
 	border: 0;
@@ -20,8 +20,56 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
 	&:active {
 		background-color: overlay(#EEEEEE, @color_yellow);
 	}
+}
 
-	& + label {
+select {
+	&:extend(textarea);
+}
+
+input {
+	&[type=text],
+	&[type=password],
+	&[type=search],
+	&[type=email],
+	&[type=url],
+	&[type=tel],
+	&[type=number] {
+		&:extend(textarea);
+	}
+}
+
+input {
+	&[type=date],
+	&[type=month],
+	&[type=week],
+	&[type=time],
+	&[type=datetime],
+	&[type=datetime-local] {
+		&:extend(textarea);
+	}
+}
+
+input {
+	// More-Button, Checkbox, Radio
+	&[type=checkbox],
+	&[type=radio] {
+
+	}
+
+	// Range-Slider
+	&[type=range] {
+
+	}
+
+	// Color
+	&[type=color] {
+
+	}
+
+	// Button
+	&[type=submit],
+	&[type=reset],
+	&[type=button] {
 
 	}
 }
